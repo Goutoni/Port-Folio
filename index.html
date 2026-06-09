@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jonas Martinen | BUT GEII</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Jonas Martinen</div>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets (SAÉ)</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Bonjour, je suis Jonas Martinen</h1>
+            <h2>Étudiant en BUT Génie Électrique et Informatique Industrielle (GEII)</h2>
+            <p>Bienvenue sur mon portfolio. Découvrez mes projets, mes compétences techniques en conception de cartes électroniques et mon parcours.</p>
+            <a href="#projects" class="btn">Voir mes projets</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>À propos de moi</h2>
+        <div class="about-flex">
+            <div class="about-text">
+                <p>Actuellement en formation de BUT GEII, je me passionne pour l'électronique, la programmation et la conception de systèmes industriels.</p>
+                <p>Au travers de mes Situations d'Apprentissage et d'Évaluation (SAÉ), j'ai pu développer des compétences pratiques solides, allant de la conception sur logiciels (Isis, Ares) à la fabrication physique de cartes électroniques, tout en apprenant à travailler efficacement en équipe.</p>
+            </div>
+            <div class="about-image">
+                <img src="Photo/photo_profil_placeholder.jpg" alt="Photo de profil de Jonas" id="profile-pic">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container bg-light">
+        <h2>Mes Projets (SAÉ)</h2>
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Thermomètre de bain pour bébé</h3>
+                <p><strong>Contexte :</strong> Projet en équipe de 4. Conception d'un thermomètre répondant à des exigences strictes (seuils froid, tiède, chaud) avec un coût inférieur à 20€ TTC.</p>
+                <p><strong>Ce que j'ai réalisé :</strong> J'ai alterné entre des rôles de meneur et de suiveur. J'ai conçu le schéma structurel sur Isis et le routage sur Ares. Nous avons également géré la fabrication de la carte et résolu des problèmes concrets (dessoudage, réajustement d'alimentation).</p>
+                <p><strong>Compétences :</strong> Isis, Ares, Insolation, Perçage, Soudure, Travail en équipe.</p>
+            </div>
+            <div class="project-gallery">
+                <img src="Photo/isis_tdb.png" alt="Schéma Isis Thermomètre">
+                <img src="Photo/ares_tdb.png" alt="Routage Ares Thermomètre">
+                <img src="Photo/fabrication carte insolation.jpg" alt="Insolation de la carte">
+                <img src="Photo/soudure.jpg" alt="Soudure des composants">
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Projet SLR (Allumage LED Rafale)</h3>
+                <p><strong>Contexte :</strong> Projet en binôme. L'objectif était de créer notre toute première carte électronique pour gérer l'allumage des LEDs d'un Rafale.</p>
+                <p><strong>Ce que j'ai réalisé :</strong> Apprentissage de bout en bout du processus de création d'une carte. Ce fut l'occasion de faire nos premières erreurs (soudures à corriger) et d'apprendre à ne plus les reproduire. Excellente entente et coopération au sein du binôme.</p>
+                <p><strong>Compétences :</strong> Découverte logicielle, Création de carte électronique, Débogage.</p>
+            </div>
+            <div class="project-gallery">
+                <img src="Photo/isis_kah_emetteur.png" alt="Schéma Emetteur">
+                <img src="Photo/ares_emetteur_kah.png" alt="Routage Emetteur">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Me contacter</h2>
+        <p>Vous êtes intéressé par mon profil pour un stage ou une alternance ? N'hésitez pas à me contacter !</p>
+        <div class="contact-links">
+            <a href="mailto:ton.email@email.com" class="btn">M'envoyer un email</a>
+            <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline" target="_blank">Mon profil LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jonas Martinen - Portfolio BUT GEII</p>
+    </footer>
+
+</body>
+</html>
