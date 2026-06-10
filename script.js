@@ -74,3 +74,26 @@ if(typewriterElement) {
     // Lancer l'effet
     setTimeout(type, 1000);
 }
+
+// 4. Indicateur de section active au scroll
+const sections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        // On soustrait 100px pour déclencher le changement un peu avant que la section touche le haut
+        const sectionTop = current.offsetTop - 100; 
+        const sectionId = current.getAttribute('id');
+        const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+
+        if(navLink) {
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
+        }
+    });
+});

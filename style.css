@@ -29,7 +29,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Police très épurée style Apple/Framer */
+    font-family: 'Inter', sans-serif;
+}
+
+/* CORRECTIF : Scroll fluide et décalage du menu fixe */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px; /* Décalage pour ne pas cacher le titre avec le menu */
 }
 
 body {
@@ -180,4 +186,62 @@ nav {
     .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
     .toggle .line2 { opacity: 0; }
     .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+}
+
+/* --- Style du lien Actif (Menu) --- */
+.nav-links a.active {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* --- Nouvelles Cartes "Centres d'intérêt" avec images --- */
+.interest-card { 
+    flex: 1; 
+    min-width: 200px; 
+    border: 1px solid var(--border-color); 
+    border-radius: 12px; 
+    background-color: var(--card-bg);
+    overflow: hidden; /* Empêche l'image de déborder des coins arrondis */
+    transition: transform 0.3s ease;
+}
+.interest-card:hover { transform: translateY(-5px); }
+.interest-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover; /* Remplit parfaitement le cadre sans déformer */
+}
+.interest-card h4 { 
+    font-weight: 600; 
+    font-size: 1rem; 
+    color: var(--text-main);
+    padding: 15px;
+    text-align: center;
+}
+
+/* --- Galeries de Projets Uniformisées --- */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.project-gallery figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.project-gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Toutes les images auront exactement la même proportion ! */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-style: italic;
 }
