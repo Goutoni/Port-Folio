@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Jonas Martinen | BUT GEII</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,77 +15,154 @@
             <ul class="nav-links">
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets (SAÉ)</a></li>
+                <li><a href="#projects">Mes SAÉ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Bonjour, je suis Jonas Martinen</h1>
-            <h2>Étudiant en BUT Génie Électrique et Informatique Industrielle (GEII)</h2>
-            <p>Bienvenue sur mon portfolio. Découvrez mes projets, mes compétences techniques en conception de cartes électroniques et mon parcours.</p>
-            <a href="#projects" class="btn">Voir mes projets</a>
+            <h1>Jonas Martinen</h1>
+            <h2>Étudiant en BUT GEII - 1ère année</h2>
+            <p>Découvrez mon parcours, mes compétences en électronique et mes projets de réalisation de cartes.</p>
+            <a href="#projects" class="btn">Découvrir mes projets</a>
         </div>
     </section>
 
     <section id="about" class="container">
-        <h2>À propos de moi</h2>
+        <div class="section-title">
+            <h2>À propos de moi</h2>
+            <div class="underline"></div>
+        </div>
         <div class="about-flex">
             <div class="about-text">
-                <p>Actuellement en formation de BUT GEII, je me passionne pour l'électronique, la programmation et la conception de systèmes industriels.</p>
-                <p>Au travers de mes Situations d'Apprentissage et d'Évaluation (SAÉ), j'ai pu développer des compétences pratiques solides, allant de la conception sur logiciels (Isis, Ares) à la fabrication physique de cartes électroniques, tout en apprenant à travailler efficacement en équipe.</p>
+                <p>Actuellement étudiant en première année de <strong>BUT Génie Électrique et Informatique Industrielle (GEII)</strong>, je suis passionné par la conception de systèmes électroniques et la résolution de problèmes techniques.</p>
+                <p>Au travers de mes Situations d'Apprentissage et d'Évaluation (SAÉ), j'ai pu passer de la théorie à la pratique : conception sur logiciels de CAO, routage, et fabrication physique de cartes électroniques (insolation, perçage, soudure).</p>
+                <p>Curieux et investi, j'aime le travail en équipe et je m'efforce de toujours apprendre de mes erreurs pour améliorer mes futures réalisations.</p>
+                <a href="#" class="btn btn-outline" style="margin-top: 20px;">Télécharger mon CV (PDF)</a>
             </div>
             <div class="about-image">
-                <img src="Photo/photo_profil_placeholder.jpg" alt="Photo de profil de Jonas" id="profile-pic">
+                <img src="Photo/photo_profil_placeholder.jpg" alt="Photo de Jonas Martinen" id="profile-pic">
             </div>
         </div>
     </section>
 
-    <section id="projects" class="container bg-light">
-        <h2>Mes Projets (SAÉ)</h2>
+    <section id="skills" class="container bg-light">
+        <div class="section-title">
+            <h2>Mes Compétences</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="skills-grid">
+            
+            <div class="skill-category">
+                <h3>Logiciels & Conception (CAO)</h3>
+                <div class="skill-bar">
+                    <span class="skill-name">Proteus Isis (Schémas)</span>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <span class="skill-name">Proteus Ares (Routage)</span>
+                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Fabrication & Pratique</h3>
+                <div class="skill-bar">
+                    <span class="skill-name">Soudure de composants</span>
+                    <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <span class="skill-name">Insolation & Perçage de cartes</span>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <span class="skill-name">Débogage matériel</span>
+                    <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Compétences Transversales</h3>
+                <div class="skill-bar">
+                    <span class="skill-name">Travail en équipe (Meneur/Suiveur)</span>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <span class="skill-name">Communication & Organisation</span>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <div class="section-title">
+            <h2>Mes SAÉ (Projets)</h2>
+            <div class="underline"></div>
+        </div>
 
         <div class="project-card">
-            <div class="project-info">
+            <div class="project-content">
                 <h3>Thermomètre de bain pour bébé</h3>
-                <p><strong>Contexte :</strong> Projet en équipe de 4. Conception d'un thermomètre répondant à des exigences strictes (seuils froid, tiède, chaud) avec un coût inférieur à 20€ TTC.</p>
-                <p><strong>Ce que j'ai réalisé :</strong> J'ai alterné entre des rôles de meneur et de suiveur. J'ai conçu le schéma structurel sur Isis et le routage sur Ares. Nous avons également géré la fabrication de la carte et résolu des problèmes concrets (dessoudage, réajustement d'alimentation).</p>
-                <p><strong>Compétences :</strong> Isis, Ares, Insolation, Perçage, Soudure, Travail en équipe.</p>
+                <div class="project-details">
+                    <p><strong>Contexte :</strong> Projet réalisé en équipe de 4. L'objectif était de concevoir un thermomètre avec des exigences strictes (indication des seuils froid, tiède et chaud) tout en respectant un budget final inférieur à 20€ TTC.</p>
+                    <p><strong>Mon rôle et réalisation :</strong> J'ai alterné entre les rôles de meneur et de suiveur. J'ai réalisé le schéma structurel sur Isis et le routage sur Ares. Nous avons également géré la fabrication complète (insolation, perçage) et la soudure.</p>
+                    <p><strong>Difficultés et solutions :</strong> Nous avions soudé un composant à l'envers et oublié de relier l'alimentation du capteur. J'ai appris à utiliser du matériel de dessoudage et nous avons corrigé la piste manquante avec un fil de pontage ("strap"). Ces erreurs formatrices nous ont appris l'importance d'une vérification rigoureuse.</p>
+                </div>
+                <div class="project-tags">
+                    <span>Isis</span><span>Ares</span><span>Soudure</span><span>Travail d'équipe</span>
+                </div>
             </div>
             <div class="project-gallery">
-                <img src="Photo/isis_tdb.png" alt="Schéma Isis Thermomètre">
-                <img src="Photo/ares_tdb.png" alt="Routage Ares Thermomètre">
-                <img src="Photo/fabrication carte insolation.jpg" alt="Insolation de la carte">
-                <img src="Photo/soudure.jpg" alt="Soudure des composants">
+                <img src="Photo/isis_tdb.png" alt="Schéma Isis Thermomètre" loading="lazy">
+                <img src="Photo/ares_tdb.png" alt="Routage Ares Thermomètre" loading="lazy">
+                <img src="Photo/fabrication carte insolation.jpg" alt="Insolation de la carte" loading="lazy">
+                <img src="Photo/fabrication carte trou.jpg" alt="Perçage de la carte" loading="lazy">
+                <img src="Photo/soudure.jpg" alt="Soudure finale" loading="lazy">
             </div>
         </div>
 
         <div class="project-card">
-            <div class="project-info">
-                <h3>Projet SLR (Allumage LED Rafale)</h3>
-                <p><strong>Contexte :</strong> Projet en binôme. L'objectif était de créer notre toute première carte électronique pour gérer l'allumage des LEDs d'un Rafale.</p>
-                <p><strong>Ce que j'ai réalisé :</strong> Apprentissage de bout en bout du processus de création d'une carte. Ce fut l'occasion de faire nos premières erreurs (soudures à corriger) et d'apprendre à ne plus les reproduire. Excellente entente et coopération au sein du binôme.</p>
-                <p><strong>Compétences :</strong> Découverte logicielle, Création de carte électronique, Débogage.</p>
+            <div class="project-content">
+                <h3>Kart à hélice (Émetteur / Récepteur)</h3>
+                <div class="project-details">
+                    <p><strong>Contexte :</strong> Projet en binôme. L'objectif de cette SAÉ était de créer nos toutes premières cartes électroniques pour commander un Kart à hélice via un système d'émetteur et de récepteur.</p>
+                    <p><strong>Mon rôle et réalisation :</strong> Nous nous sommes répartis les tâches tout en travaillant en étroite collaboration pour assurer la compatibilité entre la carte émettrice et réceptrice.</p>
+                    <p><strong>Difficultés et solutions :</strong> S'agissant de notre première vraie expérience pratique, nous avons fait face à des "soudures catastrophiques" au début et à de multiples petites erreurs. Ce projet a été extrêmement enrichissant car il nous a permis de faire nos premières erreurs de débutant, d'apprendre à les corriger ensemble, et surtout de comprendre comment ne plus les reproduire pour les SAÉ suivantes.</p>
+                </div>
+                <div class="project-tags">
+                    <span>Initiation CAO</span><span>Débogage</span><span>Binôme</span>
+                </div>
             </div>
             <div class="project-gallery">
-                <img src="Photo/isis_kah_emetteur.png" alt="Schéma Emetteur">
-                <img src="Photo/ares_emetteur_kah.png" alt="Routage Emetteur">
+                <img src="Photo/isis_kah_emetteur.png" alt="Schéma Émetteur Kart" loading="lazy">
+                <img src="Photo/ares_emetteur_kah.png" alt="Routage Émetteur Kart" loading="lazy">
+                <img src="Photo/isis_kah_recepteur.png" alt="Schéma Récepteur Kart" loading="lazy">
+                <img src="Photo/ares_recepteur_kah.png" alt="Routage Récepteur Kart" loading="lazy">
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <h2>Me contacter</h2>
-        <p>Vous êtes intéressé par mon profil pour un stage ou une alternance ? N'hésitez pas à me contacter !</p>
-        <div class="contact-links">
-            <a href="mailto:ton.email@email.com" class="btn">M'envoyer un email</a>
-            <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline" target="_blank">Mon profil LinkedIn</a>
+    <section id="contact" class="container bg-light">
+        <div class="section-title">
+            <h2>Me Contacter</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="contact-content">
+            <p>Vous êtes intéressé par mon profil pour un stage, une alternance ou un projet ? N'hésitez pas à me contacter via les liens ci-dessous.</p>
+            <div class="contact-links">
+                <a href="mailto:jonas.martinen@gmail.com" class="btn">📧 Envoyer un Email</a>
+                <a href="https://www.linkedin.com/in/jonas-martinen-580a0b396/" class="btn btn-outline" target="_blank">🔗 Mon Profil LinkedIn</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Jonas Martinen - Portfolio BUT GEII</p>
+        <p>&copy; 2026 Jonas Martinen - Portfolio BUT GEII 1</p>
     </footer>
 
 </body>
