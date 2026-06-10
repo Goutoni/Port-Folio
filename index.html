@@ -3,194 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Jonas Martinen | BUT GEII</title>
+    <title>Jonas Martinen | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">Jonas Martinen.</div>
+            <a href="index.html" class="logo">Jonas.</a>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#about" class="nav-item">À propos</a></li>
-                <li><a href="#skills" class="nav-item">Compétences</a></li>
-                <li><a href="#projects" class="nav-item">Mes SAÉ</a></li>
-                <li><a href="#contact" class="nav-item">Contact</a></li>
+                <li><a href="#about">Parcours</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#interests">Intérêts</a></li>
+                <li><button id="dark-mode-toggle">🌙 Mode Sombre</button></li>
             </ul>
             <div class="burger" id="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+                <div class="line1"></div><div class="line2"></div><div class="line3"></div>
             </div>
         </nav>
     </header>
 
-    <section id="hero" class="container">
-        <div class="hero-content">
-            <span class="badge-intro">BUT GEII - 1ère année</span>
-            <h1>Concevoir l'électronique<br> de demain.</h1>
-            <p>Bonjour, je suis Jonas. Passionné par les systèmes embarqués, je passe de l'idée schématique à la fabrication concrète de cartes électroniques.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn">Explorer mes projets</a>
-                <a href="#contact" class="btn btn-outline">Me contacter</a>
-            </div>
+    <section class="container hero">
+        <div>
+            <h1>Jonas Martinen</h1>
+            <div class="hero-subtitle">Je suis <span id="typewriter"></span></div>
+            <p style="max-width: 600px; color: var(--text-muted); margin-bottom: 30px;">
+                Étudiant en BUT Génie Électrique et Informatique Industrielle. 
+                De la conception sur logiciel à la fabrication matérielle, je donne vie aux systèmes électroniques.
+            </p>
+            <a href="#projects" class="btn">Découvrir mes projets</a>
         </div>
     </section>
 
-    <section id="about" class="container bg-light section-rounded">
-        <div class="section-header">
-            <h2>Mon Profil & Parcours</h2>
-            <p class="subtitle">Curieux, investi et passionné par la résolution de problèmes.</p>
-        </div>
+    <section id="about" class="container bg-alt" style="border-radius: 20px; padding: 60px;">
+        <h2 class="section-title">Mon Parcours</h2>
+        <p>Curieux et investi, j'aime comprendre comment les choses fonctionnent. Mon parcours reflète mon envie d'allier théorie technique et réalisation pratique.</p>
         
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Actuellement étudiant en première année de <strong>BUT Génie Électrique et Informatique Industrielle (GEII)</strong>, je me forme aux défis techniques de l'industrie moderne.</p>
-                <p>À travers mes Situations d'Apprentissage et d'Évaluation (SAÉ), j'ai appris que l'électronique n'est pas qu'une question de théorie : c'est un travail d'équipe rigoureux où chaque erreur (une piste oubliée, une soudure ratée) devient une leçon pour le projet suivant.</p>
-                <a href="CV_Jonas_Martinen.pdf" class="btn btn-small" target="_blank">📄 Télécharger mon CV</a>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Aujourd'hui</div>
+                <h3>BUT GEII - 1ère année</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">IUT de Bordeaux. Apprentissage de la CAO (Isis, Ares), réalisation de cartes électroniques, programmation et gestion de projets en équipe.</p>
             </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>Aujourd'hui</h4>
-                        <p>Étudiant en BUT GEII (1ère année)<br><em>Apprentissage de la CAO et fabrication</em></p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>Avant</h4>
-                        <p>Obtention du Baccalauréat<br><em>(Précise ta filière ici)</em></p>
-                    </div>
-                </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023 (ou année de ton bac)</div>
+                <h3>Baccalauréat STI2D</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Mention Assez Bien. Spécialité Sciences et Technologies de l'Industrie et du Développement Durable.</p>
             </div>
         </div>
     </section>
 
     <section id="skills" class="container">
-        <div class="section-header">
-            <h2>Mes Compétences</h2>
-            <p class="subtitle">Savoir-faire techniques et transversaux acquis lors de mes projets.</p>
-        </div>
-
-        <div class="skills-layout">
-            <div class="skill-category">
-                <h3>💻 CAO & Logiciels</h3>
-                <div class="badges-container">
-                    <span class="skill-badge">Proteus Isis (Schémas)</span>
-                    <span class="skill-badge">Proteus Ares (Routage)</span>
-                    <span class="skill-badge">Suite Office (Documentation)</span>
+        <h2 class="section-title">Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4>Logiciels & CAO</h4>
+                <div class="badge-container">
+                    <span class="badge">Proteus Isis</span>
+                    <span class="badge">Proteus Ares</span>
+                    <span class="badge">Suite Office</span>
                 </div>
             </div>
-
-            <div class="skill-category">
-                <h3>🛠️ Fabrication & Pratique</h3>
-                <div class="badges-container">
-                    <span class="skill-badge">Soudure & Dessoudure</span>
-                    <span class="skill-badge">Insolation de cartes</span>
-                    <span class="skill-badge">Perçage</span>
-                    <span class="skill-badge">Câblage</span>
-                    <span class="skill-badge">Débogage matériel</span>
+            <div class="skill-group">
+                <h4>Fabrication matérielle</h4>
+                <div class="badge-container">
+                    <span class="badge">Soudure & Dessoudure</span>
+                    <span class="badge">Insolation de cartes</span>
+                    <span class="badge">Perçage</span>
+                    <span class="badge">Débogage</span>
                 </div>
             </div>
-
-            <div class="skill-category">
-                <h3>🤝 Transversales</h3>
-                <div class="badges-container">
-                    <span class="skill-badge">Travail en équipe</span>
-                    <span class="skill-badge">Gestion de projet</span>
-                    <span class="skill-badge">Communication</span>
-                    <span class="skill-badge">Capacité d'adaptation</span>
+            <div class="skill-group">
+                <h4>Transversales</h4>
+                <div class="badge-container">
+                    <span class="badge">Travail d'équipe</span>
+                    <span class="badge">Gestion de projet</span>
+                    <span class="badge">Communication</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="container bg-light section-rounded">
-        <div class="section-header">
-            <h2>Mes SAÉ</h2>
-            <p class="subtitle">De la conception sur logiciel à la carte physique.</p>
-        </div>
-
+    <section id="projects" class="container">
+        <h2 class="section-title">Mes Projets</h2>
         <div class="projects-grid">
             
-            <div class="project-card">
-                <div class="project-card-image">
-                    <img src="Photo/isis_tdb.png" alt="Schéma Thermomètre">
+            <a href="thermometre.html" class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="Photo/isis_tdb.png" alt="Thermomètre">
+                    <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
-                <div class="project-card-content">
-                    <span class="project-tag">Équipe de 4</span>
-                    <h3>Thermomètre de bain pour bébé</h3>
-                    <p>Conception d'un thermomètre respectant des seuils stricts (froid, tiède, chaud) avec un budget inférieur à 20€ TTC. De la création du schéma structurel sur Isis jusqu'au routage sur Ares et la fabrication complète.</p>
-                    <p class="project-highlight"><strong>Ce que j'ai appris :</strong> Corriger des erreurs matérielles (composant à l'envers, alimentation manquante) à l'aide de pontages et de matériel de dessoudage.</p>
+                <div class="project-info">
+                    <h3>Thermomètre de bain</h3>
+                    <p>Conception d'un thermomètre (froid/tiède/chaud) avec un budget strict inférieur à 20€ TTC.</p>
+                    <span class="link-more">Lire la suite →</span>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-card">
-                <div class="project-card-image">
+            <a href="slr.html" class="project-card">
+                <div class="project-img-wrapper">
                     <img src="Photo/montage elec cable.jpg" alt="Projet SLR">
+                    <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
-                <div class="project-card-content">
-                    <span class="project-tag">Binôme</span>
-                    <h3>Projet SLR (Allumage LED Rafale)</h3>
-                    <p>Notre toute première expérience de création de carte électronique pour gérer l'allumage des LEDs d'un Rafale.</p>
-                    <p class="project-highlight"><strong>Ce que j'ai appris :</strong> La découverte complète du processus de fabrication. Ce projet nous a permis de faire nos premières "soudures catastrophiques", d'apprendre de ces erreurs de débutant et d'améliorer notre coopération en binôme.</p>
+                <div class="project-info">
+                    <h3>Projet SLR (Rafale)</h3>
+                    <p>Première carte électronique en binôme pour gérer l'allumage des LEDs d'un Rafale.</p>
+                    <span class="link-more">Lire la suite →</span>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-card">
-                <div class="project-card-image">
-                    <img src="Photo/ares_emetteur_kah.png" alt="Routage Émetteur Kart">
+            <a href="kart.html" class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="Photo/ares_emetteur_kah.png" alt="Kart à hélice">
+                    <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
-                <div class="project-card-content">
-                    <span class="project-tag">Binôme</span>
-                    <h3>Kart à hélice (Émetteur / Récepteur)</h3>
-                    <p>Création de deux cartes électroniques fonctionnant ensemble pour commander un Kart à hélice (un système d'émetteur et de récepteur).</p>
-                    <p class="project-highlight"><strong>Ce que j'ai appris :</strong> Répartir efficacement les tâches tout en assurant une compatibilité parfaite entre deux cartes distinctes. Mise en application des leçons tirées des erreurs du projet SLR.</p>
+                <div class="project-info">
+                    <h3>Kart à hélice</h3>
+                    <p>Système émetteur/récepteur complet pour le contrôle à distance d'un Kart.</p>
+                    <span class="link-more">Lire la suite →</span>
                 </div>
-            </div>
+            </a>
 
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <div class="contact-box">
-            <h2>Prêt à collaborer ?</h2>
-            <p>Je suis à la recherche de nouvelles opportunités (stage, projet). Discutons-en !</p>
-            <div class="contact-links">
-                <a href="mailto:jonas.martinen@gmail.com" class="btn">jonas.martinen@gmail.com</a>
-                <a href="https://www.linkedin.com/in/jonas-martinen-580a0b396/" class="btn btn-outline" target="_blank">Mon LinkedIn</a>
-            </div>
+    <section id="interests" class="container bg-alt" style="border-radius: 20px; padding: 60px; margin-bottom: 60px;">
+        <h2 class="section-title" style="text-align: center;">Centres d'intérêt</h2>
+        <div class="interests-grid">
+            <div class="interest-card"><h4>Escalade</h4></div>
+            <div class="interest-card"><h4>Échecs</h4></div>
+            <div class="interest-card"><h4>Sport</h4></div>
+            <div class="interest-card"><h4>Nature & Campagne</h4></div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Jonas Martinen - Construit avec passion en BUT GEII.</p>
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2026 Jonas Martinen</p>
+        <p>jonas.martinen@gmail.com | <a href="https://www.linkedin.com/in/jonas-martinen-580a0b396/" target="_blank" style="color: var(--primary);">LinkedIn</a></p>
     </footer>
 
-    <script>
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('nav-links');
-        const navItems = document.querySelectorAll('.nav-item');
-
-        // Ouvre/Ferme le menu au clic sur le bouton
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            burger.classList.toggle('toggle');
-        });
-
-        // Ferme le menu quand on clique sur un lien (très pratique sur mobile)
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                if(navLinks.classList.contains('nav-active')){
-                    navLinks.classList.remove('nav-active');
-                    burger.classList.remove('toggle');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

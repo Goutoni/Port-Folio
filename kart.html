@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kart à Hélice | Jonas Martinen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">← Retour à l'accueil</a>
+            <button id="dark-mode-toggle">🌙 Mode Sombre</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="section-title" style="margin-bottom: 10px;">Kart à hélice (Émetteur / Récepteur)</h1>
+        <p style="color: var(--text-muted); margin-bottom: 40px;">Projet en binôme | Communication matérielle</p>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="margin-bottom: 15px;">Contexte & Objectif</h3>
+            <p>L'objectif de ce projet était de créer un système de communication à distance pour commander un Kart à hélice. Contrairement aux projets précédents, il a fallu concevoir deux cartes distinctes (un émetteur et un récepteur) et s'assurer de leur parfaite synchronisation matérielle et logicielle.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="margin-bottom: 15px;">Réalisation</h3>
+            <p>Fort de notre expérience sur le projet SLR, la répartition des tâches dans le binôme a été très efficace. Les erreurs de conception et de soudure du passé ont été évitées, nous permettant de nous concentrer sur le routage complexe des deux cartes sur Proteus Ares.</p>
+        </div>
+
+        <h3 style="margin-bottom: 20px;">Galerie CAO</h3>
+        <div class="projects-grid">
+            <img src="Photo/isis_kah_emetteur.png" alt="Schéma Émetteur" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color);">
+            <img src="Photo/ares_emetteur_kah.png" alt="Routage Émetteur" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color);">
+            <img src="Photo/isis_kah_recepteur.png" alt="Schéma Récepteur" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color);">
+            <img src="Photo/ares_recepteur_kah.png" alt="Routage Récepteur" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color);">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
