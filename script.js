@@ -41,7 +41,7 @@ if(darkModeToggle) {
 // 3. Effet Typewriter (Machine à écrire)
 const typewriterElement = document.getElementById('typewriter');
 if(typewriterElement) {
-    const words = ["Étudiant en BUT GEII", "Passionné d'Électronique", "Créateur de Cartes", "Futur Technicien Supérieur"];
+    const words = ["étudiant en BUT GEII", "passionné d'Électronique", "concepteur de carte électroniques", "un futur Technicien"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
