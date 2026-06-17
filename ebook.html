@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook Downloader | Jonas Martinen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">← Retour à l'accueil</a>
+            <button id="dark-mode-toggle">🌙 Mode Sombre</button>
+        </nav>
+    </header>
+
+    <div class="container project-page-container">
+        <h1 class="section-title project-page-title">Ebook Downloader (Application Python)</h1>
+        <p class="project-page-subtitle">Projet personnel | Logiciel Desktop & Scraping</p>
+
+        <div class="project-block">
+            <h3>Contexte & Objectif</h3>
+            <p>J'ai développé une application logicielle complète permettant de télécharger des ebooks et des mangas directement depuis divers sites web. Ce projet m'a permis d'approfondir mes connaissances en développement Python et de découvrir le monde de l'extraction de données en ligne.</p>
+        </div>
+
+        <div class="project-block">
+            <h3>Détails Techniques</h3>
+            <p>Pour rendre l'outil accessible et ergonomique, l'interface graphique a été conçue à l'aide de la bibliothèque <strong>CustomTkinter</strong>. Sous le capot, le moteur de web-scraping repose sur un ensemble d'outils puissants : <strong>Selenium</strong> pour l'automatisation du navigateur, <strong>BeautifulSoup (bs4)</strong> et <strong>lxml</strong> pour le parsing du code HTML, ainsi que <strong>Requests</strong>.</p>
+        </div>
+
+        <h3 class="gallery-title">Galerie de l'application</h3>
+        <div class="project-gallery">
+            <figure>
+                <img src="Photo/app_1.png" alt="Interface Ebook Downloader 1">
+                <figcaption>Interface graphique principale avec CustomTkinter.</figcaption>
+            </figure>
+            <figure>
+                <img src="Photo/app2.png" alt="Interface Ebook Downloader 2">
+                <figcaption>Processus de recherche et de sélection des mangas.</figcaption>
+            </figure>
+            <figure>
+                <img src="Photo/app3.png" alt="Interface Ebook Downloader 3">
+                <figcaption>Fenêtre de téléchargement et statut des fichiers.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <footer class="footer-with-margin">
+        <p>&copy; 2026 Jonas Martinen</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

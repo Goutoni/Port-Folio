@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Local NAS | Jonas Martinen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">← Retour à l'accueil</a>
+            <button id="dark-mode-toggle">🌙 Mode Sombre</button>
+        </nav>
+    </header>
+
+    <div class="container project-page-container">
+        <h1 class="section-title project-page-title">Création d'un Drive Local (NAS)</h1>
+        <p class="project-page-subtitle">Projet personnel | Réseau, Linux & Raspberry Pi</p>
+
+        <div class="project-block">
+            <h3>Contexte & Objectif</h3>
+            <p>Afin de mieux comprendre l'administration réseau et la gestion des serveurs, j'ai mis en place un serveur de stockage en réseau (NAS) local sécurisé. L'objectif était de pouvoir centraliser mes fichiers importants de manière autonome et d'y avoir accès depuis n'importe quel poste de mon domicile.</p>
+        </div>
+
+        <div class="project-block">
+            <h3>Réalisation</h3>
+            <p>Ce projet a été réalisé en utilisant un nano-ordinateur <strong>Raspberry Pi</strong>. Toute la configuration a été effectuée en ligne de commande (CLI) sous environnement Linux. J'ai configuré le protocole <strong>Samba</strong> via le terminal pour gérer finement les droits d'accès des utilisateurs et les règles de partage de fichiers sur le réseau Windows/Linux.</p>
+        </div>
+
+        <h3 class="gallery-title">Galerie du projet</h3>
+        <div class="project-gallery">
+            <figure>
+                <img src="Photo/drive_terminal.png" alt="Terminal Linux Samba">
+                <figcaption>Configuration des permissions et du service Samba via le terminal Linux du Raspberry Pi.</figcaption>
+            </figure>
+            <figure>
+                <img src="Photo/drive_fichier.png" alt="Accès Windows au Drive">
+                <figcaption>Test d'accès réseau réussi : les fichiers du Drive sont lisibles depuis l'explorateur.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <footer class="footer-with-margin">
+        <p>&copy; 2026 Jonas Martinen</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

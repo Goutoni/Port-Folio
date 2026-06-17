@@ -245,3 +245,90 @@ figcaption {
     text-align: center;
     font-style: italic;
 }
+
+/* ============================
+   STYLES DÉPLACÉS DEPUIS index.html
+   ============================ */
+
+/* Espacement homogène des sections */
+section.container { margin-bottom: 60px; margin-top: 60px; }
+section.bg-alt { border-radius: 20px; padding: 60px; margin-bottom: 60px; }
+@media (max-width: 768px) { section.bg-alt { padding: 30px 20px; } }
+
+/* Tableau des compétences */
+.skills-table-container { width: 100%; overflow-x: auto; margin-top: 30px; }
+.skills-table { width: 100%; border-collapse: collapse; background-color: var(--bg-alt); border-radius: 12px; overflow: hidden; font-size: 0.95rem; }
+.skills-table th, .skills-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid var(--border-color); }
+.skills-table th { background-color: var(--primary); color: white; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+.skills-table tr:last-child td { border-bottom: none; }
+.status-badge { background: #27ae60; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
+
+/* Menu Déroulant Contact */
+.dropdown { position: relative; display: inline-block; }
+.dropdown-content { display: none; position: absolute; background-color: var(--bg-color); min-width: 220px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); top: 100%; left: 0; }
+.dropdown-content a { color: var(--text-color); padding: 12px 16px; text-decoration: none; display: block; font-size: 0.9rem; }
+.dropdown-content a:hover { background-color: var(--bg-alt); color: var(--primary); }
+.dropdown:hover .dropdown-content { display: block; }
+
+/* Bouton CV */
+.btn-cv { background-color: var(--primary) !important; color: white !important; padding: 8px 15px !important; border-radius: 20px !important; font-weight: bold; }
+.btn-cv:hover { opacity: 0.8; transform: scale(1.05); }
+
+/* Alignement Header (Image à gauche, texte à droite) */
+.hero-wrapper { display: flex; align-items: center; justify-content: center; gap: 50px; text-align: left; max-width: 900px; margin: 0 auto; }
+.hero-image { flex-shrink: 0; width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.hero-content { flex: 1; }
+.hero-content .btn { margin-top: 20px; display: inline-block; }
+@media (max-width: 768px) { .hero-wrapper { flex-direction: column; text-align: center; gap: 20px; } }
+
+/* Call to action "Cliquez pour en savoir plus" */
+.click-more { margin-top: 15px; color: var(--primary); font-weight: 600; font-size: 0.9rem; display: block; transition: transform 0.2s ease; }
+.project-card:hover .click-more { transform: translateX(5px); }
+
+/* ============================
+   STYLES INLINE CONSOLIDÉS
+   ============================ */
+
+/* Hero */
+.hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
+.hero-description { margin-top: 15px; font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); }
+
+/* Texte muted générique (paragraphes timeline, sous-titres projet) */
+.text-muted { color: var(--text-muted); }
+
+/* Section Référentiel */
+.referentiel-title { margin-top: 50px; margin-bottom: 15px; font-size: 1.5rem; }
+
+/* Sections titre centré */
+.section-title-center { text-align: center; }
+
+/* Pages projet : titre et sous-titre */
+.project-page-title { margin-bottom: 10px; }
+.project-page-subtitle { color: var(--text-muted); margin-bottom: 40px; }
+.project-page-container { margin-top: 60px; }
+
+/* Blocs de contenu projet */
+.project-block { margin-bottom: 40px; }
+.project-block h3 { margin-bottom: 15px; }
+
+/* Galerie titre */
+.gallery-title { margin-bottom: 20px; }
+
+/* Section TP Labo : grille de photos */
+.lab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+.lab-figure { margin: 0; text-align: center; }
+.lab-figure img { width: 100%; border-radius: 12px; height: 300px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.lab-figure figcaption { margin-top: 15px; color: var(--text-muted); font-size: 0.95rem; }
+
+/* Footer */
+footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; }
+.footer-with-margin { margin-top: 40px; }
+
+/* Bouton dark mode inline */
+#dark-mode-toggle { margin-left: 10px; }
+
+/* Thermomètre : image carte finale pivotée */
+.img-rotated { object-fit: contain; max-height: 400px; transform: rotate(-90deg); background-color: transparent; }
+
+/* Lien LinkedIn footer */
+.link-primary { color: var(--primary); }

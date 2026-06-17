@@ -3,6 +3,7 @@
 // 1. Menu Hamburger Mobile
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
 
 if(burger) {
     burger.addEventListener('click', () => {
@@ -11,29 +12,33 @@ if(burger) {
     });
 }
 
-// 2. Gestion du Dark / Light Mode
+// Fermeture du menu mobile lors du clic sur un lien (Bonus demandé)
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        if (navLinks.classList.contains('nav-active')) {
+            navLinks.classList.remove('nav-active');
+            burger.classList.remove('toggle');
+        }
+    });
+});
+
+// 2. Gestion du Dark Mode
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
 
-// Vérifier si un thème est déjà sauvegardé dans le navigateur
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
+if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
     if(darkModeToggle) darkModeToggle.textContent = '☀️ Mode Clair';
+} else {
+    // S'assure que le texte par défaut est bien là si on n'est pas en mode sombre
+    if(darkModeToggle) darkModeToggle.textContent = '🌙 Mode Sombre';
 }
 
 if(darkModeToggle) {
     darkModeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
-        
-        let theme = 'light';
-        if (body.classList.contains('dark-mode')) {
-            theme = 'dark';
-            darkModeToggle.textContent = '☀️ Mode Clair';
-        } else {
-            darkModeToggle.textContent = '🌙 Mode Sombre';
-        }
-        // Sauvegarder le choix de l'utilisateur
+        let theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+        darkModeToggle.textContent = theme === 'dark' ? '☀️ Mode Clair' : '🌙 Mode Sombre';
         localStorage.setItem('theme', theme);
     });
 }
@@ -41,7 +46,7 @@ if(darkModeToggle) {
 // 3. Effet Typewriter (Machine à écrire)
 const typewriterElement = document.getElementById('typewriter');
 if(typewriterElement) {
-    const words = ["étudiant en BUT GEII", "passionné d'Électronique", "concepteur de carte électroniques", "un futur Technicien"];
+    const words = ["étudiant en BUT GEII", "passionné d'électronique", "concepteur de carte électroniques", "un futur technicien"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

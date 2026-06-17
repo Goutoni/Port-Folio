@@ -14,41 +14,55 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1 class="section-title" style="margin-bottom: 10px;">Thermomètre de bain pour bébé</h1>
-        <p style="color: var(--text-muted); margin-bottom: 40px;">Projet en équipe de 4 | Conception matérielle et logicielle</p>
+    <div class="container project-page-container">
+        <h1 class="section-title project-page-title">Thermomètre de bain pour bébé</h1>
+        <p class="project-page-subtitle">Projet en équipe de 4 | Conception matérielle et logicielle</p>
 
-        <div style="margin-bottom: 40px;">
-            <h3 style="margin-bottom: 15px;">Contexte & Objectif</h3>
+        <div class="project-block">
+            <h3>Contexte & Objectif</h3>
             <p>L'objectif de cette SAÉ était de concevoir un thermomètre de bain répondant à des exigences strictes : indiquer visuellement les seuils froid, tiède et chaud. Une des contraintes majeures était financière : le produit final devait coûter moins de 20€ TTC.</p>
         </div>
 
-        <div style="margin-bottom: 40px;">
-            <h3 style="margin-bottom: 15px;">Mon rôle & Difficultés</h3>
+        <div class="project-block">
+            <h3>Mon rôle & Difficultés</h3>
             <p>J'ai alterné les rôles de meneur et suiveur. Techniquement, j'ai réalisé le schéma structurel sur Proteus Isis et le routage sur Ares. Lors de la fabrication matérielle, nous avons fait face à des défis : un composant soudé à l'envers et une alimentation capteur oubliée.</p>
             <p><strong>Solution :</strong> J'ai appris à utiliser la pompe à dessouder et nous avons tiré un fil de pontage (strap) pour relier l'alimentation manquante. Ces erreurs formatrices nous ont appris l'importance d'une double vérification du routage.</p>
         </div>
 
-    <h3 style="margin-bottom: 20px;">Galerie du projet</h3>
-    <div class="project-gallery">
-        <figure>
-            <img src="Photo/isis_tdb.png" alt="Schéma Isis">
-            <figcaption>Schéma structurel du thermomètre réalisé sur Proteus Isis.</figcaption>
-        </figure>
-        <figure>
-            <img src="Photo/ares_tdb.png" alt="Routage Ares">
-            <figcaption>Routage des pistes de la carte sur Proteus Ares.</figcaption>
-        </figure>
-        <figure>
-            <img src="Photo/fabrication carte insolation.jpg" alt="Insolation">
-            <figcaption>Processus d'insolation lors de la fabrication de la carte.</figcaption>
-        </figure>
-        <figure>
-            <img src="Photo/soudure.jpg" alt="Soudure finale">
-            <figcaption>Carte finale fonctionnelle après soudure des composants.</figcaption>
-        </figure>
+        <h3 class="gallery-title">Galerie du projet</h3>
+        <div class="project-gallery">
+            <figure>
+                <img src="Photo/isis_tdb.png" alt="Schéma Isis">
+                <figcaption>Schéma structurel du thermomètre réalisé sur Proteus Isis.</figcaption>
+            </figure>
+            <figure>
+                <img src="Photo/ares_tdb.png" alt="Routage Ares">
+                <figcaption>Routage des pistes de la carte sur Proteus Ares.</figcaption>
+            </figure>
+            <figure>
+                <img src="Photo/fabrication carte insolation.jpg" alt="Insolation">
+                <figcaption>Processus d'insolation lors de la fabrication de la carte.</figcaption>
+            </figure>
+            <figure>
+                <img src="Photo/fabrication carte trou.jpg" alt="Perçage">
+                <figcaption>Perçage des trous sur la plaque du circuit imprimé.</figcaption>
+            </figure>
+            <figure>
+                <img src="Photo/soudure.jpg" alt="Soudure finale">
+                <figcaption>Étape de soudure et de brasage des premiers composants.</figcaption>
+            </figure>
+            <figure>
+                <!-- Image pivotée via la classe .img-rotated -->
+                <img src="Photo/carte finale TDB.jpg" alt="Carte finale TDB" class="img-rotated">
+                <figcaption>Carte électronique finale opérationnelle et assemblée pour le thermomètre.</figcaption>
+            </figure>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <footer class="footer-with-margin">
+        <p>&copy; 2026 Jonas Martinen</p>
+    </footer>
+
+    <script src="script.js?v=1.7"></script>
 </body>
 </html>

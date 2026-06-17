@@ -14,8 +14,22 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">Parcours</a></li>
                 <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#interests">Intérêts</a></li>
+                <li><a href="#projects-hw">Électronique</a></li>
+                <li><a href="#projects-sw">Informatique</a></li>
+                
+                <!-- Menu déroulant Contact -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Contact ▾</a>
+                    <div class="dropdown-content">
+                        <a href="mailto:jonas.martinen@gmail.com">✉️ jonas.martinen@gmail.com</a>
+                        <a href="tel:+33769379016">📞 07 69 37 90 16</a>
+                        <a href="https://www.linkedin.com/in/jonas-martinen-580a0b396/" target="_blank">💼 LinkedIn</a>
+                    </div>
+                </li>
+                
+                <!-- Bouton CV -->
+                <li><a href="cv.pdf" target="_blank" class="btn-cv">📄 Télécharger CV</a></li>
+                
                 <li><button id="dark-mode-toggle">🌙 Mode Sombre</button></li>
             </ul>
             <div class="burger" id="burger">
@@ -25,46 +39,62 @@
     </header>
 
     <section class="container hero">
-        <div>
-            <h1>Jonas Martinen</h1>
-            <div class="hero-subtitle">Je suis <span id="typewriter"></span></div>
-            <p style="max-width: 600px; color: var(--text-muted); margin-bottom: 30px;">
-                Étudiant en BUT Génie Électrique et Informatique Industrielle. 
-                De la conception sur logiciel à la fabrication matérielle, je donne vie aux systèmes électroniques.
-            </p>
-            <a href="#projects" class="btn">Découvrir mes projets</a>
+        <div class="hero-wrapper">
+            <img src="Photo/photo_profil.png" alt="Jonas Martinen" class="hero-image">
+            <div class="hero-content">
+                <h1>Jonas Martinen</h1>
+                <div class="hero-subtitle">Je suis <span id="typewriter"></span></div>
+                <p class="hero-description">
+                    Passionné par l'ingénierie, je cherche à comprendre comment l'électronique façonne notre monde. 
+                    Mon ambition est de maîtriser les systèmes en profondeur, de l'architecture physique du <strong>Hardware</strong> 
+                    jusqu'à l'intelligence du <strong>Software</strong>, pour ne jamais rester limité à la surface du code.
+                </p>
+                <a href="#projects-hw" class="btn">Découvrir mes projets</a>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="container bg-alt" style="border-radius: 20px; padding: 60px;">
+    <section id="about" class="container bg-alt">
         <h2 class="section-title">Mon Parcours</h2>
-        <p>Curieux et investi, j'aime comprendre comment les choses fonctionnent. Mon parcours reflète mon envie d'allier théorie technique et réalisation pratique.</p>
-        
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">Aujourd'hui</div>
-                <h3>BUT GEII - 1ère année</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">IUT de Bordeaux. Apprentissage de la CAO (Isis, Ares), réalisation de cartes électroniques, programmation et gestion de projets en équipe.</p>
+                <div class="timeline-date">2025 - En cours</div>
+                <h3>BUT GEII</h3>
+                <p class="text-muted">Université de Bordeaux. Spécialité Électronique et Informatique Industrielle. Réalisation de cartes, programmation (C/C++, Python) et gestion de projets en équipe.</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">2023 (ou année de ton bac)</div>
+                <div class="timeline-date">Juillet 2024</div>
+                <h3>Stage - Département Informatique</h3>
+                <p class="text-muted">Bordeaux. Immersion dans le milieu professionnel informatique, découverte des infrastructures et de la gestion de parc.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025</div>
                 <h3>Baccalauréat STI2D</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Mention Assez Bien. Spécialité Sciences et Technologies de l'Industrie et du Développement Durable.</p>
+                <p class="text-muted">École Sainte Famille Saintonge, Bordeaux. Mention Assez Bien. Option Système d'Information et Numérique.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Juin 2022</div>
+                <h3>Stage - Cabinet d'Avocat</h3>
+                <p class="text-muted">Auprès de Maître Beauvilain. Découverte du monde juridique et rigueur administrative.</p>
             </div>
         </div>
     </section>
 
     <section id="skills" class="container">
-        <h2 class="section-title">Compétences</h2>
+        <h2 class="section-title">Compétences Techniques & Transversales</h2>
         <div class="skills-grid">
             <div class="skill-group">
-                <h4>Logiciels & CAO</h4>
+                <h4>Logiciels & Informatique</h4>
                 <div class="badge-container">
-                    <span class="badge">Proteus Isis</span>
-                    <span class="badge">Proteus Ares</span>
-                    <span class="badge">Suite Office</span>
+                    <span class="badge">C / C++</span>
+                    <span class="badge">Python</span>
+                    <span class="badge">Linux OS / Bash</span>
+                    <span class="badge">Proteus Isis & Ares</span>
+                    <span class="badge">Suite Office & Canva</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -73,90 +103,178 @@
                     <span class="badge">Soudure & Dessoudure</span>
                     <span class="badge">Insolation de cartes</span>
                     <span class="badge">Perçage</span>
-                    <span class="badge">Débogage</span>
+                    <span class="badge">Mesure (Oscilloscope)</span>
                 </div>
             </div>
             <div class="skill-group">
-                <h4>Transversales</h4>
+                <h4>Langues & Savoir-être</h4>
                 <div class="badge-container">
+                    <span class="badge">Anglais (B2)</span>
+                    <span class="badge">Espagnol (A2)</span>
                     <span class="badge">Travail d'équipe</span>
-                    <span class="badge">Gestion de projet</span>
-                    <span class="badge">Communication</span>
+                    <span class="badge">Curieux & Dynamique</span>
                 </div>
             </div>
         </div>
+
+        <h3 class="referentiel-title">Référentiel BUT GEII</h3>
+        <p class="text-muted">Conformément au programme national, voici les compétences cibles que j'ai commencé à valider :</p>
+        
+        <div class="skills-table-container">
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>Compétence</th>
+                        <th>Description (Apprentissage Critique)</th>
+                        <th>Niveau / Statut</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CONCEVOIR</strong></td>
+                        <td>Analyser, choisir les composants et réaliser le routage d'un système électronique (Isis/Ares).</td>
+                        <td><span class="status-badge">Validé - Niv. 1</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>VÉRIFIER</strong></td>
+                        <td>Définir et mettre en œuvre des protocoles de tests pour assurer la conformité d'un montage.</td>
+                        <td><span class="status-badge">Validé - Niv. 1</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>INTÉGRER</strong></td>
+                        <td>Assurer l'interopérabilité entre les couches matérielles et logicielles.</td>
+                        <td>En cours</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IMPLANTER</strong></td>
+                        <td>Mettre en service et tester une solution technique sur site.</td>
+                        <td>En cours</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <section id="projects" class="container">
-        <h2 class="section-title">Mes Projets</h2>
+    <!-- SECTION PROJETS HARDWARE -->
+    <section id="projects-hw" class="container bg-alt">
+        <h2 class="section-title">Projets Électroniques</h2>
         <div class="projects-grid">
-            
-            <a href="thermometre.html" class="project-card">
-                <div class="project-img-wrapper">
-                    <img src="Photo/isis_tdb.png" alt="Thermomètre">
-                    <div class="project-overlay"><span>Voir les détails</span></div>
-                </div>
-                <div class="project-info">
-                    <h3>Thermomètre de bain</h3>
-                    <p>Conception d'un thermomètre (froid/tiède/chaud) avec un budget strict inférieur à 20€ TTC.</p>
-                    <span class="link-more">Lire la suite →</span>
-                </div>
-            </a>
-
             <a href="slr.html" class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="Photo/montage elec cable.jpg" alt="Projet SLR">
+                    <img src="Photo/projet SLR.png" alt="Projet SLR">
                     <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
                 <div class="project-info">
                     <h3>Projet SLR (Rafale)</h3>
-                    <p>Première carte électronique en binôme pour gérer l'allumage des LEDs d'un Rafale.</p>
-                    <span class="link-more">Lire la suite →</span>
+                    <p>Découverte de la CAO et apprentissage par l'erreur en binôme.</p>
+                    <span class="click-more">Cliquez pour en savoir plus →</span>
                 </div>
             </a>
-
+            <a href="thermometre.html" class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="Photo/projet TDB.png" alt="Thermomètre">
+                    <div class="project-overlay"><span>Voir les détails</span></div>
+                </div>
+                <div class="project-info">
+                    <h3>Thermomètre de bain</h3>
+                    <p>Conception sous contrainte budgétaire (< 20€) et débogage matériel.</p>
+                    <span class="click-more">Cliquez pour en savoir plus →</span>
+                </div>
+            </a>
             <a href="kart.html" class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="Photo/ares_emetteur_kah.png" alt="Kart à hélice">
+                    <img src="Photo/projet kart à hélice.png" alt="Kart à hélice">
                     <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
                 <div class="project-info">
                     <h3>Kart à hélice</h3>
-                    <p>Système émetteur/récepteur complet pour le contrôle à distance d'un Kart.</p>
-                    <span class="link-more">Lire la suite →</span>
+                    <p>Système complexe de communication sans fil émetteur/récepteur.</p>
+                    <span class="click-more">Cliquez pour en savoir plus →</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION PROJETS SOFTWARE / INFORMATIQUE -->
+    <section id="projects-sw" class="container bg-alt">
+        <h2 class="section-title">Projets Informatiques</h2>
+        <div class="projects-grid">
+            <!-- Carte Ebook Downloader -->
+            <a href="ebook.html" class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="Photo/projet_ebook.webp" alt="Ebook Downloader" onerror="this.src='Photo/app_1.png'">
+                    <div class="project-overlay"><span>Voir les détails</span></div>
+                </div>
+                <div class="project-info">
+                    <h3>Ebook Downloader (Python)</h3>
+                    <p>Application de scraping manga/ebook avec Selenium, bs4 et CustomTkinter.</p>
+                    <span class="click-more">Cliquez pour en savoir plus →</span>
                 </div>
             </a>
 
+            <!-- Carte Drive Local -->
+            <a href="drive.html" class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="Photo/projet_drive.webp" alt="Drive Local" onerror="this.src='Photo/drive_fichier.png'">
+                    <div class="project-overlay"><span>Voir les détails</span></div>
+                </div>
+                <div class="project-info">
+                    <h3>Drive Local NAS</h3>
+                    <p>Serveur de stockage en réseau local sécurisé sur Raspberry Pi (Samba).</p>
+                    <span class="click-more">Cliquez pour en savoir plus →</span>
+                </div>
+            </a>
         </div>
     </section>
 
-    <section id="interests" class="container bg-alt" style="border-radius: 20px; padding: 60px; margin-bottom: 60px;">
-        <h2 class="section-title" style="text-align: center;">Centres d'intérêt</h2>
+    <!-- SECTION TP / LABO -->
+    <section id="lab" class="container bg-alt">
+        <h2 class="section-title">Pratique en Laboratoire (TP)</h2>
+        <p>Au-delà des grands projets, la formation en GEII est rythmée par de nombreuses séances de travaux pratiques. Ces heures passées en laboratoire sont essentielles pour apprendre à maîtriser l'équipement de mesure et acquérir de solides réflexes de câblage (électronique analogique et puissance).</p>
+        
+        <div class="lab-grid">
+            <figure class="lab-figure">
+                <img src="Photo/montage tp elec cable.jpg" alt="TP Électronique">
+                <figcaption>Câblage et test d'un circuit en TP d'Électronique.</figcaption>
+            </figure>
+            <figure class="lab-figure">
+                <img src="Photo/montage tp energie cable.jpg" alt="TP Énergie">
+                <figcaption>Montage et câblage de puissance en TP d'Énergie.</figcaption>
+            </figure>
+            <figure class="lab-figure">
+                <img src="Photo/oscilloscope energie.jpg" alt="Oscilloscope">
+                <figcaption>Utilisation de l'oscilloscope et relevé de mesures.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- SECTION INTÉRÊTS -->
+    <section id="interests" class="container">
+        <h2 class="section-title section-title-center">Centres d'intérêt</h2>
         <div class="interests-grid">
             <div class="interest-card">
-                <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=400&h=300" alt="Escalade">
-                <h4>Escalade</h4>
+                <img src="Photo/photo_handball.jpg" alt="Handball">
+                <h4>Handball (8 ans, niveau régional)</h4>
             </div>
             <div class="interest-card">
-                <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=400&h=300" alt="Échecs">
-                <h4>Échecs</h4>
+                <img src="Photo/escalade.jpg" alt="Escalade">
+                <h4>Escalade en bloc</h4>
             </div>
             <div class="interest-card">
-                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=400&h=300" alt="Sport">
-                <h4>Sport en général</h4>
+                <img src="Photo/run.jpg" alt="Course à pied">
+                <h4>Course à pied</h4>
             </div>
             <div class="interest-card">
-                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=400&h=300" alt="Nature & Campagne">
-                <h4>Nature & Campagne</h4>
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&h=300" alt="Lecture et Films">
+                <h4>Lecture & Cinéma</h4>
             </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem;">
-        <p>&copy; 2026 Jonas Martinen</p>
-        <p>jonas.martinen@gmail.com | <a href="https://www.linkedin.com/in/jonas-martinen-580a0b396/" target="_blank" style="color: var(--primary);">LinkedIn</a></p>
+    <footer>
+        <p>&copy; 2026 Jonas Martinen - Construit avec passion.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1.9"></script>
 </body>
 </html>
