@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Jonas Martinen, étudiant en BUT GEII à l'Université de Bordeaux. Découvrez mes projets en électronique, informatique et conception de cartes.">
     <title>Jonas Martinen | Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text x=%2250%22 y=%2250%22 font-family=%22Inter,sans-serif%22 font-size=%2240%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22 dominant-baseline=%22central%22>JM</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,7 +30,7 @@
                 </li>
                 
                 <!-- Bouton CV -->
-                <li><a href="cv.pdf" target="_blank" class="btn-cv">📄 Télécharger CV</a></li>
+                <li><a href="Photo/cv.pdf" target="_blank" class="btn-cv">📄 Télécharger CV</a></li>
                 
                 <li><button id="dark-mode-toggle">🌙 Mode Sombre</button></li>
             </ul>
@@ -40,21 +42,21 @@
 
     <section class="container hero">
         <div class="hero-wrapper">
-            <img src="Photo/photo_profil.png" alt="Jonas Martinen" class="hero-image">
+            <img src="Photo/profil.jpeg" alt="Jonas Martinen" class="hero-image">
             <div class="hero-content">
                 <h1>Jonas Martinen</h1>
                 <div class="hero-subtitle">Je suis <span id="typewriter"></span></div>
                 <p class="hero-description">
                     Passionné par l'ingénierie, je cherche à comprendre comment l'électronique façonne notre monde. 
-                    Mon ambition est de maîtriser les systèmes en profondeur, de l'architecture physique du <strong>Hardware</strong> 
-                    jusqu'à l'intelligence du <strong>Software</strong>, pour ne jamais rester limité à la surface du code.
+                    Mon ambition est d'arriver à une compréhension des systèmes tant au niveau du <strong>Hardware</strong> 
+                    que au niveau du <strong>Software</strong>.
                 </p>
                 <a href="#projects-hw" class="btn">Découvrir mes projets</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="container bg-alt">
+    <section id="about" class="container bg-alt reveal">
         <h2 class="section-title">Mon Parcours</h2>
         <div class="timeline">
             <div class="timeline-item">
@@ -65,26 +67,26 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-date">Juillet 2024</div>
-                <h3>Stage - Département Informatique</h3>
-                <p class="text-muted">Bordeaux. Immersion dans le milieu professionnel informatique, découverte des infrastructures et de la gestion de parc.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
                 <div class="timeline-date">2025</div>
                 <h3>Baccalauréat STI2D</h3>
                 <p class="text-muted">École Sainte Famille Saintonge, Bordeaux. Mention Assez Bien. Option Système d'Information et Numérique.</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
+                <div class="timeline-date">Juillet 2024</div>
+                <h3>Stage - Département Informatique</h3>
+                <p class="text-muted">Bordeaux. Immersion dans le milieu professionnel informatique, découverte des infrastructures et de la gestion de parc.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
                 <div class="timeline-date">Juin 2022</div>
-                <h3>Stage - Cabinet d'Avocat</h3>
+                <h3>Stage d'observation - Cabinet d'Avocat</h3>
                 <p class="text-muted">Auprès de Maître Beauvilain. Découverte du monde juridique et rigueur administrative.</p>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="container">
+    <section id="skills" class="container reveal">
         <h2 class="section-title">Compétences Techniques & Transversales</h2>
         <div class="skills-grid">
             <div class="skill-group">
@@ -143,12 +145,12 @@
                     <tr>
                         <td><strong>INTÉGRER</strong></td>
                         <td>Assurer l'interopérabilité entre les couches matérielles et logicielles.</td>
-                        <td>En cours</td>
+                        <td><span class="status-badge-pending">En cours</span></td>
                     </tr>
                     <tr>
                         <td><strong>IMPLANTER</strong></td>
                         <td>Mettre en service et tester une solution technique sur site.</td>
-                        <td>En cours</td>
+                        <td><span class="status-badge-pending">En cours</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -156,12 +158,12 @@
     </section>
 
     <!-- SECTION PROJETS HARDWARE -->
-    <section id="projects-hw" class="container bg-alt">
+    <section id="projects-hw" class="container bg-alt reveal">
         <h2 class="section-title">Projets Électroniques</h2>
         <div class="projects-grid">
             <a href="slr.html" class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="Photo/projet SLR.png" alt="Projet SLR">
+                    <img src="Photo/projet SLR.png" alt="Projet SLR" loading="lazy">
                     <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
                 <div class="project-info">
@@ -172,7 +174,7 @@
             </a>
             <a href="thermometre.html" class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="Photo/projet TDB.png" alt="Thermomètre">
+                    <img src="Photo/projet TDB.png" alt="Thermomètre" loading="lazy">
                     <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
                 <div class="project-info">
@@ -183,7 +185,7 @@
             </a>
             <a href="kart.html" class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="Photo/projet kart à hélice.png" alt="Kart à hélice">
+                    <img src="Photo/projet kart à hélice.png" alt="Kart à hélice" loading="lazy">
                     <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
                 <div class="project-info">
@@ -196,13 +198,13 @@
     </section>
 
     <!-- SECTION PROJETS SOFTWARE / INFORMATIQUE -->
-    <section id="projects-sw" class="container bg-alt">
+    <section id="projects-sw" class="container bg-alt reveal">
         <h2 class="section-title">Projets Informatiques</h2>
         <div class="projects-grid">
             <!-- Carte Ebook Downloader -->
             <a href="ebook.html" class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="Photo/projet_ebook.webp" alt="Ebook Downloader" onerror="this.src='Photo/app_1.png'">
+                    <img src="Photo/projet_ebook.webp" alt="Ebook Downloader" loading="lazy" onerror="this.src='Photo/app_1.png'">
                     <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
                 <div class="project-info">
@@ -215,7 +217,7 @@
             <!-- Carte Drive Local -->
             <a href="drive.html" class="project-card">
                 <div class="project-img-wrapper">
-                    <img src="Photo/projet_drive.webp" alt="Drive Local" onerror="this.src='Photo/drive_fichier.png'">
+                    <img src="Photo/projet_drive.webp" alt="Drive Local" loading="lazy" onerror="this.src='Photo/drive_fichier.png'">
                     <div class="project-overlay"><span>Voir les détails</span></div>
                 </div>
                 <div class="project-info">
@@ -228,53 +230,73 @@
     </section>
 
     <!-- SECTION TP / LABO -->
-    <section id="lab" class="container bg-alt">
+    <section id="lab" class="container bg-alt reveal">
         <h2 class="section-title">Pratique en Laboratoire (TP)</h2>
         <p>Au-delà des grands projets, la formation en GEII est rythmée par de nombreuses séances de travaux pratiques. Ces heures passées en laboratoire sont essentielles pour apprendre à maîtriser l'équipement de mesure et acquérir de solides réflexes de câblage (électronique analogique et puissance).</p>
         
         <div class="lab-grid">
             <figure class="lab-figure">
-                <img src="Photo/montage tp elec cable.jpg" alt="TP Électronique">
+                <img src="Photo/montage tp elec cable.jpg" alt="TP Électronique" loading="lazy">
                 <figcaption>Câblage et test d'un circuit en TP d'Électronique.</figcaption>
             </figure>
             <figure class="lab-figure">
-                <img src="Photo/montage tp energie cable.jpg" alt="TP Énergie">
+                <img src="Photo/montage tp energie cable.jpg" alt="TP Énergie" loading="lazy">
                 <figcaption>Montage et câblage de puissance en TP d'Énergie.</figcaption>
             </figure>
             <figure class="lab-figure">
-                <img src="Photo/oscilloscope energie.jpg" alt="Oscilloscope">
+                <img src="Photo/oscilloscope energie.jpg" alt="Oscilloscope" loading="lazy">
                 <figcaption>Utilisation de l'oscilloscope et relevé de mesures.</figcaption>
             </figure>
         </div>
     </section>
 
     <!-- SECTION INTÉRÊTS -->
-    <section id="interests" class="container">
+    <section id="interests" class="container reveal">
         <h2 class="section-title section-title-center">Centres d'intérêt</h2>
         <div class="interests-grid">
             <div class="interest-card">
-                <img src="Photo/photo_handball.jpg" alt="Handball">
+                <img src="Photo/photo_handball.jpg" alt="Handball" loading="lazy">
                 <h4>Handball (8 ans, niveau régional)</h4>
             </div>
             <div class="interest-card">
-                <img src="Photo/escalade.jpg" alt="Escalade">
+                <img src="Photo/escalade.jpg" alt="Escalade" loading="lazy">
                 <h4>Escalade en bloc</h4>
             </div>
             <div class="interest-card">
-                <img src="Photo/run.jpg" alt="Course à pied">
+                <img src="Photo/run.jpg" alt="Course à pied" loading="lazy">
                 <h4>Course à pied</h4>
             </div>
             <div class="interest-card">
-                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&h=300" alt="Lecture et Films">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=400&h=300" alt="Lecture et Films" loading="lazy">
                 <h4>Lecture & Cinéma</h4>
             </div>
         </div>
     </section>
 
+    <!-- SECTION CE QUE JE RECHERCHE -->
+    <section id="recherche" class="container recherche-section reveal">
+        <h2 class="section-title section-title-center">Ce que je recherche</h2>
+        <div class="recherche-card">
+            <h3>🎯 Stage de 2ème année — BUT GEII</h3>
+            <p>
+                Je suis à la recherche d'un <strong>stage de 3 mois</strong> (avril – juin 2027) 
+                dans le cadre de ma deuxième année de BUT GEII. Je souhaite mettre en pratique 
+                mes compétences en électronique et en informatique industrielle au sein d'une 
+                entreprise innovante.
+            </p>
+            <a href="mailto:jonas.martinen@gmail.com" class="btn-contact">📩 Me contacter</a>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Jonas Martinen - Construit avec passion.</p>
+        <p>&copy; 2026 Jonas Martinen</p>
+        <div class="footer-links">
+            <a href="mailto:jonas.martinen@gmail.com">✉️ Email</a>
+            <a href="tel:+33769379016">📞 Téléphone</a>
+            <a href="https://www.linkedin.com/in/jonas-martinen-580a0b396/" target="_blank">💼 LinkedIn</a>
+        </div>
     </footer>
 
-    <script src="script.js?v=1.9"></script>
+    <script src="script.js?v=2.0"></script>
 </body>
 </html>

@@ -46,7 +46,7 @@ if(darkModeToggle) {
 // 3. Effet Typewriter (Machine à écrire)
 const typewriterElement = document.getElementById('typewriter');
 if(typewriterElement) {
-    const words = ["étudiant en BUT GEII", "passionné d'électronique", "concepteur de carte électroniques", "un futur technicien"];
+    const words = ["étudiant en BUT GEII", "passionné d'électronique", "concepteur de cartes électroniques", "un futur technicien"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -102,3 +102,21 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// 5. Scroll Reveal Animation (IntersectionObserver)
+const revealElements = document.querySelectorAll('.reveal');
+
+if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+}

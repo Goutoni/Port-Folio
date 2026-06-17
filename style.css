@@ -11,6 +11,7 @@
     --border-color: #e5e7eb;
     --card-bg: #ffffff;
     --shadow: 0 10px 30px rgba(0,0,0,0.05);
+    --header-bg: rgba(255, 255, 255, 0.85);
 }
 
 .dark-mode {
@@ -23,6 +24,7 @@
     --border-color: #374151;
     --card-bg: #1f2937;
     --shadow: 0 10px 30px rgba(0,0,0,0.3);
+    --header-bg: rgba(17, 24, 39, 0.85);
 }
 
 * {
@@ -49,7 +51,9 @@ a { text-decoration: none; color: inherit; }
 
 /* --- Navigation --- */
 header {
-    background-color: var(--bg-color);
+    background-color: var(--header-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -123,7 +127,7 @@ nav {
 
 /* --- Hero Section --- */
 .hero { min-height: 70vh; display: flex; align-items: center; }
-.hero h1 { font-size: 4rem; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px; }
+.hero h1 { font-size: 2.8rem; letter-spacing: -2px; line-height: 1.1; margin-bottom: 10px; }
 .hero-subtitle { font-size: 1.5rem; color: var(--text-muted); margin-bottom: 40px; min-height: 40px;}
 #typewriter { color: var(--primary); font-weight: 600; border-right: 2px solid var(--primary); padding-right: 5px; animation: blink 0.7s infinite; }
 @keyframes blink { 50% { border-color: transparent; } }
@@ -151,7 +155,7 @@ nav {
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
 .skill-group h4 { margin-bottom: 15px; font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
 .badge-container { display: flex; flex-wrap: wrap; gap: 10px; }
-.badge { background-color: var(--bg-alt); border: 1px solid var(--border-color); padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); }
+.badge { background-color: var(--bg-alt); border: 1px solid var(--border-color); padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); transition: all 0.3s ease; cursor: default; }
 
 /* --- Projets UX (Grille et Hover) --- */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
@@ -159,8 +163,8 @@ nav {
 .project-card:hover { box-shadow: var(--shadow); }
 
 /* Effet Voile Sombre et Clic */
-.project-img-wrapper { position: relative; height: 220px; overflow: hidden; cursor: pointer; }
-.project-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.project-img-wrapper { position: relative; height: 260px; overflow: hidden; cursor: pointer; background-color: var(--bg-alt); }
+.project-img-wrapper img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s; }
 .project-overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
 .project-overlay span { color: #fff; font-weight: 600; font-size: 1.1rem; padding: 10px 20px; border: 2px solid #fff; border-radius: 8px; transform: translateY(20px); transition: transform 0.3s ease; }
 .project-card:hover .project-img-wrapper img { transform: scale(1.05); }
@@ -174,8 +178,7 @@ nav {
 
 /* --- Centres d'intérêt --- */
 .interests-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; text-align: center; }
-.interest-card { flex: 1; min-width: 150px; padding: 30px; border: 1px solid var(--border-color); border-radius: 12px; background-color: var(--card-bg); }
-.interest-card h4 { font-weight: 600; font-size: 1rem; color: var(--text-main); }
+/* (interest-card styles merged into block below) */
 
 /* --- Responsive --- */
 @media(max-width: 768px) {
@@ -232,8 +235,7 @@ nav {
 }
 .project-gallery img {
     width: 100%;
-    aspect-ratio: 4 / 3; /* Toutes les images auront exactement la même proportion ! */
-    object-fit: cover;
+    height: auto;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow);
@@ -266,7 +268,7 @@ section.bg-alt { border-radius: 20px; padding: 60px; margin-bottom: 60px; }
 /* Menu Déroulant Contact */
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content { display: none; position: absolute; background-color: var(--bg-color); min-width: 220px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); top: 100%; left: 0; }
-.dropdown-content a { color: var(--text-color); padding: 12px 16px; text-decoration: none; display: block; font-size: 0.9rem; }
+.dropdown-content a { color: var(--text-main); padding: 12px 16px; text-decoration: none; display: block; font-size: 0.9rem; }
 .dropdown-content a:hover { background-color: var(--bg-alt); color: var(--primary); }
 .dropdown:hover .dropdown-content { display: block; }
 
@@ -290,7 +292,6 @@ section.bg-alt { border-radius: 20px; padding: 60px; margin-bottom: 60px; }
    ============================ */
 
 /* Hero */
-.hero h1 { font-size: 2.8rem; margin-bottom: 10px; }
 .hero-description { margin-top: 15px; font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); }
 
 /* Texte muted générique (paragraphes timeline, sous-titres projet) */
@@ -327,8 +328,105 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-c
 /* Bouton dark mode inline */
 #dark-mode-toggle { margin-left: 10px; }
 
-/* Thermomètre : image carte finale pivotée */
-.img-rotated { object-fit: contain; max-height: 400px; transform: rotate(-90deg); background-color: transparent; }
+/* Thermomètre : image carte finale (rotation appliquée directement au fichier) */
 
 /* Lien LinkedIn footer */
 .link-primary { color: var(--primary); }
+
+/* ============================
+   NOUVELLES AMÉLIORATIONS
+   ============================ */
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Badge hover interactif */
+.badge:hover {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* Dark mode toggle hover */
+#dark-mode-toggle:hover {
+    background-color: var(--bg-alt);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Badge "En cours" */
+.status-badge-pending {
+    background: #f59e0b;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Section Recherche de Stage */
+.recherche-section {
+    text-align: center;
+    padding: 60px 0;
+}
+.recherche-card {
+    background: linear-gradient(135deg, var(--primary), #1d4ed8);
+    color: white;
+    padding: 50px 40px;
+    border-radius: 16px;
+    max-width: 700px;
+    margin: 30px auto 0;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+}
+.dark-mode .recherche-card {
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+.recherche-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.recherche-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.92;
+}
+.recherche-card .btn-contact {
+    display: inline-block;
+    margin-top: 25px;
+    background: white;
+    color: var(--primary);
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.recherche-card .btn-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer enrichi */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: var(--primary);
+}
