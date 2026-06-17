@@ -144,6 +144,27 @@ nav {
 }
 .btn:hover { transform: translateY(-2px); opacity: 0.9; }
 
+.btn-doc {
+    background-color: var(--bg-alt);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.btn-doc:hover {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
 /* --- Timeline (Parcours) --- */
 .timeline { border-left: 2px solid var(--border-color); padding-left: 30px; margin-top: 40px; }
 .timeline-item { position: relative; margin-bottom: 40px; }
